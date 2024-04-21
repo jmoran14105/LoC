@@ -183,6 +183,7 @@ ignore files with `loc -u`, and include hidden files/dirs with `loc -uu`.
 - FORTRAN Legacy
 - FORTRAN Modern
 - F# (Fsharp)
+- GDScript
 - GLSL
 - Go
 - Groovy
