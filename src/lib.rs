@@ -125,6 +125,7 @@ pub enum Lang {
     PureScript,
     Pyret,
     Python,
+    GDScript,
     Qcl,
     Qml,
     R,
@@ -254,6 +255,7 @@ impl Lang {
             PureScript => "PureScript",
             Pyret => "Pyret",
             Python => "Python",
+            GDScript => "GDScript",
             Qcl => "Qcl",
             Qml => "Qml",
             R => "R",
@@ -419,6 +421,7 @@ pub fn lang_from_ext(filepath: &str) -> Lang {
         "purs" => PureScript,
         "arr" => Pyret,
         "py" => Python,
+        "gd" => GDScript,
         "r" => R,
         "rake" | "rb" => Ruby,
         "re" | "rei" => Reason,
@@ -539,8 +542,7 @@ pub fn counter_config_for_lang<'a>(lang: Lang) -> (SmallVec<[&'a str; 3]>, Small
         Html | Polly | RubyHtml | XML => html_style,
 
         BourneShell | Make | Awk | CShell | Gherkin | Makefile | Nim | R | SaltStack | Tcl
-        | Toml | Yaml | Zsh | Elixir => sh_style,
-
+        | Toml | Yaml | Zsh | Elixir | GDScript => sh_style,
 
         // TODO(cgag): not 100% sure that yacc belongs here.
         AmbientTalk | C | CCppHeader | Rust | Yacc | ActionScript | ColdFusionScript | Css | Cpp | CUDA
